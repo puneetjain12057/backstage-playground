@@ -13,7 +13,7 @@ backend:
   #   keys:
   #     - secret: ${BACKEND_SECRET}
   # baseUrl: http://localhost:80
-  baseUrl: https://adityasinghal26-devcontainer-name-8000.preview.app.github.dev
+  baseUrl: https://puneetjain12057-effective-memory-649g6w75xr7c4qqw-8000.preview.app.github.dev
   listen:
     port: 7007
     # Uncomment the following host directive to bind to specific interfaces
@@ -42,7 +42,7 @@ integrations:
     - host: github.com
       # This is a Personal Access Token or PAT from GitHub. You can find out how to generate this token, and more information
       # about setting up the GitHub integration here: https://backstage.io/docs/getting-started/configuration#setting-up-a-github-integration
-      token: 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
+      token: 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
     ### Example for how to add your GitHub Enterprise instance using the API:
     # - host: ghe.example.net
     #   apiBaseUrl: https://ghe.example.net/api/v3
