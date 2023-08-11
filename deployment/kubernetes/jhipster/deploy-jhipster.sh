@@ -2,7 +2,7 @@
 BUILD_TAG=$1
 IMAGE_REG="localhost:5001"
 IMAGE_REP="jhipster"
-
+#adityasinghal26/jhipster:0.1.0
 # Build docker image with the latest build backend artefacts
 cd $CODESPACE_VSCODE_FOLDER
 docker image build jhipster-online/ -f jhipster-online/Dockerfile --tag $IMAGE_REG/$IMAGE_REP:$BUILD_TAG

@@ -1,6 +1,6 @@
 app:
   title: Scaffolded Backstage App
-  baseUrl: http://localhost:3000
+  baseUrl: ${BACKEND_URL}
 
 organization:
   name: My Company
@@ -23,9 +23,10 @@ backend:
     # Content-Security-Policy directives follow the Helmet format: https://helmetjs.github.io/#reference
     # Default Helmet Content-Security-Policy values can be removed by setting the key to false
   cors:
-    origin: http://localhost:3000
+    origin: ${BACKEND_URL}
     methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
     credentials: true
+    #Access-Control-Allow-Origin: '*'
   # This is for local development only, it is not recommended to use this in production
   # The production database configuration is stored in app-config.production.yaml
   database:
@@ -81,7 +82,12 @@ kubernetes:
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
-  providers: {}
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: 50a467b561bb07bb7a40
+        clientSecret: a4775c8c982739d4b5b47adcfdf359ff3ffdc94d
 
 scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options
